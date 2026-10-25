@@ -117,7 +117,23 @@ registerQuiz({
       ],
     },
     {
-      title: "Тур 4. По кусочку",
+      title: "Тур 4. Угадай по силуэту",
+      description: "Узнайте персонажа по его силуэту.",
+      questions: [
+        { text: "Кто это?", images: ["img/t4s1_q.png"], answer: "Джек Скеллингтон", comment: "«Кошмар перед Рождеством»", answerImages: ["img/t4s1_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s2_q.png"], answer: "Уэнсдей Аддамс", answerImages: ["img/t4s2_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s3_q.png"], answer: "Монстр Франкенштейна", answerImages: ["img/t4s3_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s4_q.png"], answer: "Малефисента", answerImages: ["img/t4s4_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s5_q.png"], answer: "Фредди Крюгер", comment: "«Кошмар на улице Вязов»", answerImages: ["img/t4s5_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s6_q.png"], answer: "Каспер", comment: "Дружелюбное привидение", answerImages: ["img/t4s6_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s7_q.png"], answer: "Битлджус", answerImages: ["img/t4s7_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s8_q.png"], answer: "Эдвард Руки-ножницы", answerImages: ["img/t4s8_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s9_q.png"], answer: "Граф Дракула", comment: "Бела Лугоши, «Дракула» (1931)", answerImages: ["img/t4s9_a.jpg"] },
+        { text: "Кто это?", images: ["img/t4s10_q.png"], answer: "Майк Вазовски", comment: "«Корпорация монстров»", answerImages: ["img/t4s10_a.jpg"] },
+      ],
+    },
+    {
+      title: "Тур 5. По кусочку",
       description: "Узнайте целое по небольшому фрагменту.",
       questions: [
         { text: "Узнайте картину по кусочку.", images: ["img/t4q1_q.jpg"], answer: "Эдвард Мунк — «Крик»", answerImages: ["img/t4q1_a.jpg"] },
@@ -131,7 +147,7 @@ registerQuiz({
       ],
     },
     {
-      title: "Тур 5. Кино и сериалы",
+      title: "Тур 6. Кино и сериалы",
       questions: [
         {
           text: "Чтобы вызвать этого призрака-«биоэкзорциста» из фильма Тима Бёртона (1988), его имя нужно произнести трижды. Назовите его.",
@@ -180,7 +196,7 @@ registerQuiz({
       ],
     },
     {
-      title: "Тур 6. Микс",
+      title: "Тур 7. Микс",
       questions: [
         {
           text: "Переведите фразу, с которой дети стучатся в двери на Хеллоуин: «Trick or treat!»",
