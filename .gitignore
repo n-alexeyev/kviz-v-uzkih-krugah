@@ -1,0 +1,6 @@
+raw/
+.DS_Store
+.claude/
+# приватные квизы — только локально
+quizzes/1/
+quizzes/2/
