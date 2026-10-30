@@ -38,8 +38,7 @@
   const quiz = () => QUIZZES[S.quizId];
   const round = () => quiz().rounds[S.r];
   const question = () => round().questions[S.q];
-  const CACHE_BUST = Date.now(); // свежие картинки после правок, без кэша браузера
-  const imgSrc = (src) => `quizzes/${S.quizId}/${typeof src === "string" ? src : src.src}?v=${CACHE_BUST}`;
+  const imgSrc = (src) => `quizzes/${S.quizId}/${typeof src === "string" ? src : src.src}${window.V || ""}`;
   const teamName = (t, i) => (t.name || "").trim() || `Команда ${i + 1}`;
   const total = (t) => Object.values(t.scores).reduce((a, b) => a + (Number(b) || 0), 0);
   const fmt = (n) => (Math.round(n * 100) / 100).toString().replace(".", ",");
@@ -565,7 +564,7 @@
   if (!pending) render();
   list.forEach((q) => {
     const s = document.createElement("script");
-    s.src = `quizzes/${q.id}/quiz.js?v=${Date.now()}`;
+    s.src = `quizzes/${q.id}/quiz.js${window.V || ""}`;
     s.onload = ready;
     s.onerror = () => { console.warn("Не удалось загрузить квиз", q.id); ready(); };
     document.head.appendChild(s);

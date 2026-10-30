@@ -7,12 +7,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script>document.write('<link rel="stylesheet" href="style.css?v=' + Date.now() + '">')</script>
+  <script>
+    // Метка версии против кэша — только на сервере; локальные файлы с «?v=» Safari не грузит.
+    window.V = location.protocol === "file:" ? "" : "?v=" + Date.now();
+    document.write('<link rel="stylesheet" href="style.css' + V + '">');
+  </script>
 </head>
 <body>
   <div id="app"></div>
   <div id="lightbox" hidden><img alt=""></div>
-  <script>document.write('<script src="quizzes/index.js?v=' + Date.now() + '"><\/script>')</script>
-  <script>document.write('<script src="app.js?v=' + Date.now() + '"><\/script>')</script>
+  <script>document.write('<script src="quizzes/index.js' + V + '"><\/script>')</script>
+  <script>document.write('<script src="app.js' + V + '"><\/script>')</script>
 </body>
 </html>
